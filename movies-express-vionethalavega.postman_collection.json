@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "d8c398d3-25cf-4f7c-bf90-95581fe77069",
+		"name": "movies-express-vionethalavega",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49014577",
+		"_collection_link": "https://vionethalavega20-9040051.postman.co/workspace/vionethalavega20's-Workspace~07362fa4-2b7b-481f-8ee8-1bc121e0bdc9/collection/49014577-d8c398d3-25cf-4f7c-bf90-95581fe77069?action=share&source=collection_link&creator=49014577"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul\": \"Abadi Nan Jaya\",\r\n    \"tahunRilis\": \"2025\",\r\n    \"sutradara\": \"Septa Nugroho\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie/68fefe08915ce14fd36b2319",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"68fefe08915ce14fd36b2319"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie/68fefe08915ce14fd36b2319",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"68fefe08915ce14fd36b2319"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
