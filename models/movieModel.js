@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import UserModel from './userModel';
 
 const movieSchema = new mongoose.Schema(
     {
@@ -20,6 +21,11 @@ const movieSchema = new mongoose.Schema(
             required: true,
             trim: true
         },
+        
+        createdBy:{
+            type: mongoose.Types.ObjectId,
+            ref: UserModel
+        }
     },
     { 
         timestamps: true,
