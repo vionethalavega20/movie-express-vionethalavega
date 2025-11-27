@@ -9,7 +9,7 @@ export const listMovies = async (req, res) => {
         
         res.status(200).json({
             message: "List Movies berhasil diambil",
-            data: data,
+            data: movies,
         });
     }catch (error) {
         res.status(500).json({
