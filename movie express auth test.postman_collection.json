@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "4c8611ec-aacd-465e-83fe-b4b2df45765f",
+		"name": "movie express auth test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49014577",
+		"_collection_link": "https://vionethalavega20-9040051.postman.co/workspace/vionethalavega20's-Workspace~07362fa4-2b7b-481f-8ee8-1bc121e0bdc9/collection/49014577-4c8611ec-aacd-465e-83fe-b4b2df45765f?action=share&source=collection_link&creator=49014577"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"vionethalavega\",\r\n    \"email\":\"vionetha@gmail.com\",\r\n    \"password\":\"12345678\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"vionethalavega\",\r\n    \"email\":\"vionetha@gmail.com\",\r\n    \"password\":\"12345678\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
