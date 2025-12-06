@@ -12,6 +12,7 @@ app.use(express.json());
 app.use('/api', api)
 
 app.get("/", (req, res) => {
+
     res.status(200).json({
         message : "OK"
     })
