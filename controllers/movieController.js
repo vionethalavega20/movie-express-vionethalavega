@@ -21,34 +21,36 @@ export const listMovies = async (req, res) => {
 
 export const addNewMovie = async (req, res) => {
     try {
-        const request = req.body
+        const { judul, tahunRilis, sutradara } = req.body;
 
-        if(!judul || !tahunRilis|| !sutradara){
+        if (!judul || !tahunRilis || !sutradara) {
             return res.status(400).json({
-                message: " Semua field (judul, tahun rilis, sutradara) wajib diisi",
+                message: "Semua field (judul, tahun rilis, sutradara) wajib diisi",
                 data: null
             });
         }
 
         const response = await movieModel.create({
-            judul : request.judul,
-            tahunRilis : request.tahunRilis,
-            sutradara : request.sutradara,
+            judul,
+            tahunRilis,
+            sutradara,
             createdBy: req.user?.user_id
         });
+
         res.status(201).json({
             message: "Movie berhasil dibuat",
             data: response
-        })
+        });
+
     } catch (error) {
         res.status(500).json({
             message: "Gagal menambahkan movie",
-            error : error.message,
+            error: error.message,
             data: null
-
-        })
+        });
     }
-}
+};
+
 
 export const updateMovie = async (req, res) => {
     try {
